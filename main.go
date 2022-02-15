@@ -182,8 +182,7 @@ func layout(g *gocui.Gui) error {
 		if _, err := g.SetCurrentView(GUESSES); err != nil {
 			return err
 		}
-		fmt.Fprintln(v, game.Word)
-
+		updateGuessView(v)
 	}
 
 	return nil
